@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="../src/js/Signup.js"></script> 
         <title>User Signup&Login</title>
         <!-- Add icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,28 +14,28 @@
         <i>SampleLayout</i>
        </div>   
        <div>
-        <form class="signup_form">
+        <form class="signup_form" onsubmit='return register()' action="./pages/LoginPage.html">
             <div class="input-container">
               <i class="fa fa-user icon"></i>
-              <input class="input-field" type="text" placeholder="Username" name="usrnm">
-            </div>
-
-            <div class="input-container">
-                <i class="fa fa-user icon"></i>
-                <input class="input-field" type="text" placeholder="Lastname" name="usrnm">
-              </div>
-          
-            <div class="input-container">
-              <i class="fa fa-envelope icon"></i>
-              <input class="input-field" type="text" placeholder="Email" name="email">
+              <input id = "username" class="input-field" type="text" placeholder="Username" name="username" required> 
             </div>
             
             <div class="input-container">
+              <i class="fa fa-envelope icon"></i>
+              <input id="email" class="input-field" type="text" placeholder="Email" name="email" required>             
+            </div>
+            <p id='emailErrorMsg'></p>
+            <div class="input-container">
               <i class="fa fa-key icon"></i>
-              <input class="input-field" type="password" placeholder="Password" name="psw">
+              <input id="password" class="input-field" type="password" placeholder="Password" name="password" required>
+            </div>
+
+            <div class="input-container">
+              <i class="fa fa-key icon"></i>
+              <input id="confirmpassword" class="input-field" type="password" placeholder="Confirm Password" name="confirmpassword" required>
             </div>
           
-            <button type="submit" class="btn">Register</button>
+            <button type="submit" class="btn">Signup</button>
           </form>
        </div>    
     </body>
